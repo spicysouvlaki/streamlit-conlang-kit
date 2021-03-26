@@ -25,12 +25,6 @@ English could sound like hundreds of years in the future.
 sample_passage = """It began with the forging of the Great Rings. Three were given to the Elves, immortal, wisest and fairest of all beings. Seven to the Dwarf-Lords, great miners and craftsmen of the mountain halls. And nine, nine rings were gifted to the race of Men, who above all else desire power. For within these rings was bound the strength and the will to govern each race. But they were all of them deceived, for another ring was made. Deep in the land of Mordor, in the Fires of Mount Doom, the Dark Lord Sauron forged a master ring, and into this ring he poured his cruelty, his malice and his will to dominate all life.
 """
 
-st.markdown("""
-### _Aside_ What the hell are these symbols??
-Since we're talking about the changes in sound, we can't use normal English spellings since they have been accurate guides
-to pronounciation for hundreds of years. We rely on the International Phonetic Alphabet here! It's the same thing as if
-you've ever seen a pronounciation guide in the dictionary
-""")
 col1, col2 = st.beta_columns(2)
 
 col1.markdown("## corpus")
@@ -39,6 +33,13 @@ gen0_tokens = (''.join([x.lower() for x in corpus if x not in ',.'])).split(' ')
 gen0_ipa = [convert(t) for t in gen0_tokens]
 col2.markdown("## IPA")
 col2.write(pd.DataFrame(zip(gen0_tokens, gen0_ipa), columns=['word', 'pronounciation']))
+
+st.markdown("""
+_aside_: What the hell are these symbols??
+Since we're talking about the changes in sound, we can't use normal English spellings since they have been accurate guides
+to pronounciation for hundreds of years. We rely on the International Phonetic Alphabet here! It's the same thing as if
+you've ever seen a pronounciation guide in the dictionary
+""")
 
 def glottal_stops(l):
     return [t.replace('təl', 'ʔel') for t in l]
