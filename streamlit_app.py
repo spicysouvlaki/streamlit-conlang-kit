@@ -99,6 +99,9 @@ table = pd.DataFrame(pd.DataFrame( generations)).transpose()
 table.columns = generation_columns
 st.write(table.transpose())
 
+if sum(choices.values()) == 0:
+    st.warning("you must choose some traits to see the rest of the app")
+
 st.markdown("## Behold!")
 
 st.write(' '.join(generations[-1]))
