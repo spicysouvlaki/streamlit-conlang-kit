@@ -37,7 +37,7 @@ col2.write(pd.DataFrame(zip(gen0_tokens, gen0_ipa), columns=['word', 'pronouncia
 st.markdown("""
 #### _aside_: What the hell are these symbols??
 
-Since we're talking about the changes in sound, we can't use normal English spellings since they have been accurate guides
+Since we're talking about the changes in sound, we can't use normal English spellings since they haven't been accurate guides
 to pronounciation for hundreds of years. We rely on the International Phonetic Alphabet here! It's the same thing as if
 you've ever seen a pronounciation guide in the dictionary
 """)
@@ -66,7 +66,7 @@ def th_retroflex(l):
 
 
 st.markdown("""
-## How will your language evolve?
+## How will your English evolve?
 Choose some traits below to add to your lanague
 """)
 mutations = {
