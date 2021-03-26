@@ -35,7 +35,7 @@ col2.markdown("## IPA")
 col2.write(pd.DataFrame(zip(gen0_tokens, gen0_ipa), columns=['word', 'pronounciation']))
 
 st.markdown("""
-_aside_: What the hell are these symbols??
+#### _aside_: What the hell are these symbols??
 
 Since we're talking about the changes in sound, we can't use normal English spellings since they have been accurate guides
 to pronounciation for hundreds of years. We rely on the International Phonetic Alphabet here! It's the same thing as if
