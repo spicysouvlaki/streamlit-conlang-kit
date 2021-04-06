@@ -6,6 +6,12 @@ import pandas as pd
 import re
 import difflib
 
+st.components.v1.html("""
+<head>
+    <meta title="og:title" content="new-ish english"/>
+    <meta title="og:description" content="a conlang construction kit"/>
+</head>
+""")
 
 st.markdown("""
 # New-ish English
